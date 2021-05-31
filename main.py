@@ -27,11 +27,10 @@ for i in range(7):
     hangmanImage = pygame.image.load("hangman" + str(i) + ".png")
     images.append(hangmanImage)
 hangman_status = 0
-#words = ["IDE", "REPLIT", "PYTHON", "PYGAME"]
 r = RandomWords()
 words = r.get_random_words(hasDictionaryDef = "true", includePartOfSpeech = "noun,verb", minCorpusCount = 1,maxCorpusCount = 10, minDictionaryCount = 1, maxDictionaryCount = 10, minLength = 5, maxLength = 8, limit = 15)
-wordToGuess = random.choice(words).upper()
-#wordToGuess = random.choice(words)
+wordToGuess = random.choice(words)
+wordToGuess = wordToGuess.upper()
 guessed = []
 WHITE = (255,255,255)
 BLACK = (0,0,0)
